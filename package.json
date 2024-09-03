@@ -1,26 +1,28 @@
 {
-    "name": "socw10d1devopsdocker",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start",
-        "lint": "next lint --max-warnings=0",
-        "prepare": "husky"
-    },
-    "dependencies": {
-        "next": "14.2.7",
-        "react": "^18",
-        "react-dom": "^18"
-    },
-    "devDependencies": {
-        "eslint": "^8",
-        "eslint-config-next": "14.2.7",
-        "husky": "^9.1.5",
-        "lint-staged": "^15.2.10"
-    },
-    "lint-staged": {
-        "*.{js,jsx,ts,tsx}": "next lint"
-    }
+  "name": "socw10d1devopsdocker",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint --max-warnings 0",
+    "prepare": "husky",
+    "prettier": "prettier . --write"
+  },
+  "dependencies": {
+    "next": "14.2.7",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.7",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.10",
+    "prettier": "3.3.3"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "next lint"
+  }
 }
