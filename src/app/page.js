@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
+var potato = "potato";
 export default function Home() {
     return (
         <main className={styles.main}>
