@@ -1,0 +1,50 @@
+name: Lint and Format
+run-name: ${{ github.actor }} is making a pull request - checking linting and formatting
+
+#specifies that the workflow should run when a pull request is opened or updated
+on: pull_request 
+#technically we could do on push as well, cos then it gives immediate feedback to the developer. could specify on main or only on features branches
+
+#defines the jobs that the workflow should run
+jobs:
+    #name of job
+  lint-and-format:
+    #specifies the type of machine that the job should run on
+    runs-on: ubuntu-latest
+
+    #steps that the job should run
+    steps:
+      - name: Checkout repository
+      #uses the built in actions/checkout action to check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+      #uses the built in docker/setup-buildx-action action to set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+        #caches the Docker layers to speed up the build process
+      - name: Cache Docker layers
+      #uses the built in actions/cache action to cache the Docker layers
+        uses: actions/cache@v3
+        #specifies the path to the cache and the key to use for the cache
+        with:
+          path: /tmp/.buildx-cache
+          #key is a unique identifier for the cache, in this case it includes the operating system and the commit SHA (basically a inique id for a commit)
+          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          #restore-keys is a list of keys to use for restoring the cache - defaults to this if no commit SHA is found - allows partial cache restoration so still faster
+          restore-keys: |
+            ${{ runner.os }}-buildx-
+
+        #builds the Docker image
+      - name: Build Docker image
+      #runs the docker build command to build the Docker image with name my-dev-image
+        run: docker build -t my-dev-image .
+        
+    
+      - name: Run Lint
+      #runs the npm run lint command in the Docker container
+        run: docker run --rm my-dev-image npm run lint
+
+      - name: Run prettier
+      #runs the npm run prettier command in the Docker container
+        run: docker run --rm my-dev-image npm run prettier
