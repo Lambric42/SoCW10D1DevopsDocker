@@ -1,9 +1,11 @@
 # Hackathon Plan
 
 ## Create a simple GitHub Action
-- Create a new repository * using containerise repo from earlier in week ✅
+
+- Create a new repository \* using containerise repo from earlier in week ✅
 
 ## Create the Github Action File
+
 - Clone repository locally ✅
 - Create the workflow folder - .github/workflows ✅
 - Create the pull request file in workflows .github/workflows/pr-test.yml ✅
@@ -13,6 +15,7 @@
 - push the changes to github ✅
 
 ## Test our action
+
 - Create a new branch: git checkout -b test-action-works ✅
 - Create index.js file to test ✅
 - Add the new file ✅
