@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --max-warnings 0",
-    "prepare": "husky",
-    "prettier": "prettier . --write"
+    "prepare": "husky install",
+    "prettier": "prettier --write ."
   },
   "dependencies": {
     "next": "14.2.7",
@@ -26,7 +26,7 @@
     "prettier": "3.3.3"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "next lint"
+    "*.{js,jsx,ts,tsx}": "prettier --write"
   },
   "jest": {
     "testEnvironment": "jsdom",

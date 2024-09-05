@@ -1,0 +1,38 @@
+name: Pull Request CI
+run-name: ${{ github.actor }} is making a pull request
+# Trigger the workflow on pull requests targeting the main branch
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Set up Node.js (example for a JS project, adjust accordingly)
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Say Hello World
+        run: echo "Hello, World!"
+
+
+      # # Install dependencies
+      # - name: Install dependencies
+      #   run: npm install
+
+      # # Run tests
+      # - name: Run tests
+      #   run: npm test
+
+      # # Optionally run a linter
+      # - name: Run linter
+      #   run: npm run lint
