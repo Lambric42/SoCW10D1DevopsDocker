@@ -5,4 +5,3 @@ const Title = ({ text }) => {
 };
 
 export default Title;
-#2]54#7642357
