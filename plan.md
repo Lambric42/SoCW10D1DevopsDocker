@@ -1,20 +1,25 @@
 # Hackathon Plan
 
 <<<<<<< HEAD
+
 ## Ticket 1: Creating a Simple GitHub Action
 
 ### Create a GitHub Repo
-- Create a new repository * using containerise repo from earlier in week ✅
+
+- Create a new repository \* using containerise repo from earlier in week ✅
 
 ### Create the Github Action File
+
 =======
+
 ## Create a simple GitHub Action
 
 - Create a new repository \* using containerise repo from earlier in week ✅
 
 ## Create the Github Action File
 
->>>>>>> 8370f6465bd1f551657d182e0bf919c6e8a76acd
+> > > > > > > 8370f6465bd1f551657d182e0bf919c6e8a76acd
+
 - Clone repository locally ✅
 - Create the workflow folder - .github/workflows ✅
 - Create the pull request file in workflows .github/workflows/pr-test.yml ✅
@@ -24,11 +29,15 @@
 - push the changes to github ✅
 
 <<<<<<< HEAD
+
 ### Test our action
+
 =======
+
 ## Test our action
 
->>>>>>> 8370f6465bd1f551657d182e0bf919c6e8a76acd
+> > > > > > > 8370f6465bd1f551657d182e0bf919c6e8a76acd
+
 - Create a new branch: git checkout -b test-action-works ✅
 - Create index.js file to test ✅
 - Add the new file ✅
@@ -43,9 +52,11 @@
 ## Integrate Docker for Linting and Formatting
 
 ### Update the GitHub Action
+
 - In workflows file, create a new YAML file for continuous integration - CI.yml
 - Add content to YAML file
 - Add, commit and push changes
 
 ### Test the New Action in CI.yml
-- 
+
+-
