@@ -11,9 +11,7 @@ export default function Home() {
           Get started by dancing then flipping then editing&nbsp;
           <code className={styles.code}>src/app/page.js</code>
         </p>
-        15 
-        #po[90-946`14650-]-09`]
-
+        476]24[7#45..1.,1]
         <div>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
