@@ -40,12 +40,13 @@ jobs:
         #runs the docker build command to build the Docker image with name my-dev-image
         run: docker build -t my-dev-image .
 
+        # running lint and prettier separately in different containers avoids side effects from running them in the same container
       - name: Run Lint
-        #runs the npm run lint command in the Docker container
+        #runs the npm run lint command in the Docker container then removes the container
         run: docker run --rm my-dev-image npm run lint
 
       - name: Run prettier
-        #runs the npm run prettier command in the Docker container
+        #runs the npm run prettier command in the Docker container then removes the container
         run: docker run --rm my-dev-image npm run prettier
 
         #comment for tsting PR
